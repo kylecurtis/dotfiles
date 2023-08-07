@@ -38,10 +38,23 @@ require("lazy").setup({
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-nvim-lua",
 
+    -- TELESCOPE FILE BROWSER
+    {
+        "nvim-telescope/telescope-file-browser.nvim",
+        dependencies = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    },
+
     -- TMUX NAVIGATION
     "christoomey/vim-tmux-navigator",
 
     -- COLOR SCHEME
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
+
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     
 })

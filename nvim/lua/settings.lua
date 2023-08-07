@@ -26,9 +26,10 @@ vim.opt.showcmd = true
 vim.o.guicursor = 'n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50'
 
 -- COLOR SCHEME
-vim.cmd.colorscheme "catppuccin"
+--vim.cmd.colorscheme "catppuccin"
+vim.cmd[[colorscheme tokyonight-night]]
 
 -- TRANSPARENCY
-vim.cmd[[highlight Normal guibg=NONE ctermbg=NONE]]
-vim.cmd[[highlight NonText guibg=NONE ctermbg=NONE]]
+--vim.cmd[[highlight Normal guibg=NONE ctermbg=NONE]]
+--vim.cmd[[highlight NonText guibg=NONE ctermbg=NONE]]
 
