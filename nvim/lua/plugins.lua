@@ -12,7 +12,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-   
+
     -- LSP CONFIG (MUST BE IN THIS ORDER)
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -20,12 +20,12 @@ require("lazy").setup({
 
     -- LUALINE
     "nvim-lualine/lualine.nvim",
-    
+
     -- TREESITTER
     {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
-    
+
     -- TELESCOPE
-    {'nvim-telescope/telescope.nvim', tag = '0.1.2', 
+    {'nvim-telescope/telescope.nvim', tag = '0.1.2',
     dependencies = { 'nvim-lua/plenary.nvim' }},
 
     -- LUASNIP
@@ -37,6 +37,9 @@ require("lazy").setup({
     "hrsh7th/cmp-path",
     "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-nvim-lua",
+
+    -- RUST-TOOLS
+    "simrat39/rust-tools.nvim",
 
     -- TELESCOPE FILE BROWSER
     {
@@ -56,5 +59,5 @@ require("lazy").setup({
     },
 
     { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-    
+
 })
