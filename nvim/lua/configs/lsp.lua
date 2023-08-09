@@ -13,4 +13,18 @@ require("lspconfig").pyright.setup {
     capabilities = capabilities,
 }
 
+-- JAVASCRIPT / TYPESCRIPT
+require("lspconfig").tsserver.setup {
+    capabilities = capabilities,
+}
+
+-- C / C++
+require("lspconfig").clangd.setup {
+    capabilities = capabilities,
+}
+
+-- RUST
+require("lspconfig").rust_analyzer.setup {
+    capabilities = capabilities,
+}
 
