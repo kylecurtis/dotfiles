@@ -69,17 +69,50 @@
   // VIM (TOKYO NIGHT/STORM COLORS)
   // ==========================================================================
   "vim.statusBarColorControl": true,
-  "vim.statusBarColors.normal": ["#7aa2f7", "#1a1b26"],
-  "vim.statusBarColors.insert": ["#9ece6a", "#24283b"],
-  "vim.statusBarColors.visual": ["#f7768e", "#1a1b26"],
-  "vim.statusBarColors.visualline": ["#2ac3de", "#24283b"],
-  "vim.statusBarColors.visualblock": ["#e0af68", "#1a1b26"],
-  "vim.statusBarColors.replace": ["#73daca", "#24283b"],
-  "vim.statusBarColors.commandlineinprogress": ["#7dcfff", "#1a1b26"],
-  "vim.statusBarColors.searchinprogressmode": ["#ff9e64", "#24283b"],
-  "vim.statusBarColors.easymotionmode": ["#b4f9f8", "#1a1b26"],
-  "vim.statusBarColors.easymotioninputmode": ["#bb9af7", "#24283b"],
-  "vim.statusBarColors.surroundinputmode": ["#c0caf5", "#1a1b26"],
+  "vim.statusBarColors.normal": [
+    "#7aa2f7",
+    "#1a1b26"
+  ],
+  "vim.statusBarColors.insert": [
+    "#9ece6a",
+    "#24283b"
+  ],
+  "vim.statusBarColors.visual": [
+    "#f7768e",
+    "#1a1b26"
+  ],
+  "vim.statusBarColors.visualline": [
+    "#2ac3de",
+    "#24283b"
+  ],
+  "vim.statusBarColors.visualblock": [
+    "#e0af68",
+    "#1a1b26"
+  ],
+  "vim.statusBarColors.replace": [
+    "#73daca",
+    "#24283b"
+  ],
+  "vim.statusBarColors.commandlineinprogress": [
+    "#7dcfff",
+    "#1a1b26"
+  ],
+  "vim.statusBarColors.searchinprogressmode": [
+    "#ff9e64",
+    "#24283b"
+  ],
+  "vim.statusBarColors.easymotionmode": [
+    "#b4f9f8",
+    "#1a1b26"
+  ],
+  "vim.statusBarColors.easymotioninputmode": [
+    "#bb9af7",
+    "#24283b"
+  ],
+  "vim.statusBarColors.surroundinputmode": [
+    "#c0caf5",
+    "#1a1b26"
+  ],
   "workbench.colorCustomizations": {
     "statusBar.background": "#7aa2f7",
     "statusBar.noFolderBackground": "#7aa2f7",
@@ -87,15 +120,19 @@
     "statusBar.foreground": "#1a1b26",
     "statusBar.debuggingForeground": "#1a1b26"
   },
-  
   // ==========================================================================
   // VIM (INSERT MODE)
   // ==========================================================================
   "vim.insertModeKeyBindings": [
     {
       // J+K TO ESCAPE
-      "before": ["j", "k"],
-      "after": ["<Esc>"]
+      "before": [
+        "j",
+        "k"
+      ],
+      "after": [
+        "<Esc>"
+      ]
     }
   ],
   // ==========================================================================
@@ -104,22 +141,40 @@
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       // OPEN TERMINAL
-      "before": ["<leader>", "t"],
-      "commands": ["workbench.action.terminal.toggleTerminal"]
+      "before": [
+        "<leader>",
+        "t"
+      ],
+      "commands": [
+        "workbench.action.terminal.toggleTerminal"
+      ]
     },
     {
       // OPEN EXPLORER
-      "before": ["<leader>", "e"],
-      "commands": ["workbench.view.explorer"]
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.view.explorer"
+      ]
     },
     {
       // OPEN SOURCE CONTROL
-      "before": ["<leader>", "s"],
-      "commands": ["workbench.view.scm"]
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.view.scm"
+      ]
     },
     {
       // CLOSE EVERYTHING EXCEPT EDITOR
-      "before": ["<leader>", "x"],
+      "before": [
+        "<leader>",
+        "x"
+      ],
       "commands": [
         "workbench.action.closeSidebar",
         "workbench.action.terminal.kill",
@@ -128,18 +183,33 @@
     },
     {
       // CLOSE EDITOR TAB (SAVE FIRST!)
-      "before": ["<leader>", "c"],
-      "commands": ["workbench.action.closeActiveEditor"]
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
     },
     {
       // SHOW DEFINITION PREVIEW
-      "before": ["g", "h"],
-      "commands": ["editor.action.showDefinitionPreviewHover"]
+      "before": [
+        "g",
+        "h"
+      ],
+      "commands": [
+        "editor.action.showDefinitionPreviewHover"
+      ]
     },
     {
       // GLOBAL FIND
-      "before": ["<leader>", "f"],
-      "commands": ["workbench.action.findInFiles"]
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "workbench.action.findInFiles"
+      ]
     }
   ],
   // ==========================================================================
@@ -190,7 +260,7 @@
   },
   "[css]": {
     "editor.tabSize": 4,
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.css-language-features"
   },
   // ==========================================================================
   // SYSTEMS TECHNOLOGIES
@@ -222,7 +292,7 @@
   "[python]": {
     "editor.tabSize": 4,
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "ms-python.autopep8"
+    "editor.defaultFormatter": "ms-python.black-formatter"
   },
   // ==========================================================================
   // FRIEND ZONE
