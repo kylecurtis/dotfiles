@@ -4,12 +4,12 @@
   // ==========================================================================
   "window.titleBarStyle": "custom",
   "editor.fontFamily": "'SpaceMono Nerd Font', 'FiraCode Nerd Font', 'Ubuntu Mono', monospace",
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Gruvbox Material Dark",
   "workbench.iconTheme": "moxer-icons",
   "workbench.sideBar.location": "right",
   "editor.minimap.enabled": false,
   "editor.lineNumbers": "relative",
-  "window.zoomLevel": 1.5,
+  "window.zoomLevel": 2.0,
   "workbench.startupEditor": "none",
   "editor.wordWrap": "on",
   "editor.lineHeight": 1.5,
@@ -21,19 +21,20 @@
   "editor.suggestSelection": "first",
   "editor.detectIndentation": false,
   "editor.parameterHints.enabled": false,
+  "editor.renderWhitespace": "trailing",
   "debug.inlineValues": "on",
   // ==========================================================================
   // FONT & TABS
   // ==========================================================================
-  "editor.fontSize": 17,
-  "terminal.integrated.fontSize": 17,
-  "scm.inputFontSize": 17,
-  "debug.console.fontSize": 17,
-  "markdown.preview.fontSize": 17,
-  "interactiveSession.editor.fontSize": 17,
+  "editor.fontSize": 15,
+  "terminal.integrated.fontSize": 15,
+  "scm.inputFontSize": 15,
+  "debug.console.fontSize": 15,
+  "markdown.preview.fontSize": 15,
+  "interactiveSession.editor.fontSize": 15,
   "editor.tabSize": 4,
-  "notebook.markup.fontSize": 17,
-  "notebook.output.fontSize": 17,
+  "notebook.markup.fontSize": 15,
+  "notebook.output.fontSize": 15,
   // ==========================================================================
   // TERMINAL
   // ==========================================================================
@@ -43,6 +44,8 @@
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+
   // ==========================================================================
   // SCROLL SETTINGS
   // ==========================================================================
@@ -114,11 +117,11 @@
     "#1a1b26"
   ],
   "workbench.colorCustomizations": {
-    "statusBar.background": "#7aa2f7",
-    "statusBar.noFolderBackground": "#7aa2f7",
-    "statusBar.debuggingBackground": "#7aa2f7",
-    "statusBar.foreground": "#1a1b26",
-    "statusBar.debuggingForeground": "#1a1b26"
+    "statusBar.background": "#9ece6a",
+    "statusBar.noFolderBackground": "#9ece6a",
+    "statusBar.debuggingBackground": "#9ece6a",
+    "statusBar.foreground": "#24283b",
+    "statusBar.debuggingForeground": "#24283b"
   },
   // ==========================================================================
   // VIM (INSERT MODE)
@@ -297,5 +300,5 @@
   // ==========================================================================
   // FRIEND ZONE
   // ==========================================================================
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
 }
