@@ -1,0 +1,23 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"ayu",
+		"Catppuccin color schemes",
+		"FileManager",
+		"gruvbox",
+		"LaTeXTools",
+		"LSP-ruff",
+		"LSP-rust-analyzer",
+		"LSP-TexLab",
+		"Material Theme",
+		"Package Control",
+		"Rust Enhanced",
+		"RustFmt",
+		"Terminus",
+		"TOML",
+	],
+}

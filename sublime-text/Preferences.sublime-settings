@@ -1,0 +1,20 @@
+{
+	"ignored_packages":
+	[
+	],
+	"index_files": true,
+	"theme": "gruvbox.sublime-theme",
+	"color_scheme": "gruvbox (Dark) (Hard).sublime-color-scheme",
+
+	"font_face": "Berkeley Mono",
+	"font_size": 11,
+	"ui_scale": 1.35,
+	"translate_tabs_to_spaces": true,
+	"highlight_line": true,
+	"show_indentation": false,
+	"index_exclude_gitignore": true,
+	"vintage_start_in_command_mode": true,
+	"vintage_use_clipboard": true,
+	"relative_line_numbers": true,
+	"vintage_ctrl_keys": true,
+}
