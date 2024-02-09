@@ -17,4 +17,13 @@
 	"vintage_use_clipboard": true,
 	"relative_line_numbers": true,
 	"vintage_ctrl_keys": true,
+	"draw_minimap_border": false,
+	"draw_minimap": false,
+	"hide_minimap": true,
+	"always_show_minimap_viewport": false,
+
+	"font_options":
+	[
+		"no_italic",
+	],
 }

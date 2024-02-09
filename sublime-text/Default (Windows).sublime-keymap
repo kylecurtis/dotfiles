@@ -9,5 +9,28 @@
     ]
 },
 
-{ "keys": ["ctrl+shift+r"], "command": "reindent" , "args": { "single_line": false } } 
+{ "keys": ["ctrl+shift+r"], "command": "reindent" , "args": { "single_line": false } },
+
+// Disable Tab from selecting an autocomplete suggestion
+{
+    "keys": ["tab"],
+    "command": "noop",
+    "context": [
+        {"key": "auto_complete_visible"}
+    ]
+},
+// Use alternative keys for navigation, e.g., ctrl+n and ctrl+p
+{
+    "keys": ["ctrl+n"],
+    "command": "move",
+    "args": {"by": "lines", "forward": true},
+    "context": [{"key": "auto_complete_visible"}]
+},
+{
+    "keys": ["ctrl+p"],
+    "command": "move",
+    "args": {"by": "lines", "forward": false},
+    "context": [{"key": "auto_complete_visible"}]
+},
+
 ]
