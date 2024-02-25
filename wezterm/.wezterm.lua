@@ -4,11 +4,11 @@ local config = wezterm.config_builder()
 
 -- GRAPHICS CONFIGURATION
 for _, gpu in ipairs(wezterm.gui.enumerate_gpus()) do
-  if gpu.backend == 'Vulkan' and gpu.device_type == 'IntegratedGpu' then
-    config.webgpu_preferred_adapter = gpu
-    config.front_end = 'WebGpu'
-    break
-  end
+    if gpu.backend == 'Vulkan' and gpu.device_type == 'IntegratedGpu' then
+        config.webgpu_preferred_adapter = gpu
+        config.front_end = 'WebGpu'
+        break
+    end
 end
 
 config.webgpu_power_preference = "HighPerformance"
@@ -18,6 +18,8 @@ config.default_prog = { 'C:/Program Files/Git/bin/bash.exe', '-l'} -- GIT BASH
 -- config.default_prog = { '/usr/local/bin/bash', '-l'} -- BASH SHELL
 -- config.default_prog = { '/usr/local/bin/zsh', '-l'} -- ZSHELL
 -- config.default_prog = { '/usr/local/bin/fish', '-l'} -- FISH SHELL
+-- config.default_domain = 'WSL:Ubuntu' -- WSL (UBUNTU)
+-- config.default_domain = 'WSL:Arch' -- WSL (ARCH)
 
 -- WINDOW AND THEMES
 config.color_scheme = 'Catppuccin Mocha'
@@ -55,6 +57,26 @@ config.hide_mouse_cursor_when_typing = true
 config.detect_password_input = true
 config.check_for_updates = false
 config.hide_mouse_cursor_when_typing = true
+
+-- KEYBINDS
+
+-- LEADER: (CTRL + SPACE)
+config.leader = { key = 'Space', mods = 'CTRL', timeout_milliseconds = 1000 }
+
+-- CUSTOM ACTIONS
+local act = wezterm.action
+config.keys = {
+    -- Create a new tab in the same domain as the current pane.
+    -- NEW TAB: (LEADER + t)
+    { key = 't', mods = 'LEADER', action = act.SpawnTab 'CurrentPaneDomain', }, -- NEW TAB
+    { key = 'c', mods = 'LEADER', action = act.CloseCurrentTab {confirm = true} }, -- CLOSE CURRENT TAB
+    { key = 'n', mods = 'LEADER', action = act.MoveTabRelative(1) }, -- MOVE TAB NEXT (FORWARD)
+    { key = 'p', mods = 'LEADER', action = act.MoveTabRelative(-1) }, -- MOVE TAB PREVIOUS (BACK)
+    { key = 'h', mods = 'LEADER', action = act.ActivateTabRelative(-1) }, -- SWITCH TO LEFT TAB
+    { key = 'l', mods = 'LEADER', action = act.ActivateTabRelative(1) }, -- SWITCH TO RIGHT TAB
+
+
+}
 
 -- WEZTERM SETUP (END)
 return config
