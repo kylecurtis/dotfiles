@@ -1,9 +1,8 @@
 {
     // =========================================================================
-    // My custom vscode settings for Windows and Linux usage.
+    // MY VISUAL STUDIO CODE CONFIG
     // Found at: https://github.com/kylecurtis/dotfiles
     // =========================================================================
-    //
     // Custom Vim Keybinds:
     //    - Vim leader = <space>.
     //    - "jk" is used to exit edit mode.
@@ -13,39 +12,20 @@
     //    - <leader> + f = global find (search)
     //    - <leader> + x = close all other ui elements (need to be in editor)
     //    - <leader> + c = close current file (save first!)
-    //
-    // Considerations:
-    //    - My primary font is Berkeley Mono.
-    //    - My sidebar is on the right side, and minimap is disabled.
-    //    - My editor ruler is at column 80.
-    //    - My window zoom level is 2.0.
-    //
     // =========================================================================
     // THEME & ICON SETTINGS
     // =========================================================================
-    // "workbench.colorTheme": "Gruvbox Material Dark",
-    // "workbench.colorTheme": "Catppuccin Mocha",
-    // "workbench.colorTheme": "Catppuccin Macchiato",
-    "workbench.colorTheme": "Ayu Dark",
-    // "workbench.colorTheme": "Ayu Dark Bordered",
-    // "workbench.colorTheme": "Ayu Mirage",
-    // "workbench.colorTheme": "Ayu Mirage Bordered",
-    // "workbench.colorTheme": "Tokyo Night",
-    // "workbench.colorTheme": "Tokyo Night Storm",
-    //
-    // "workbench.iconTheme": "catppuccin-mocha",
-    // "workbench.iconTheme": "catppuccin-macchiato",
-    "workbench.iconTheme": "moxer-icons",
-
+    "workbench.colorTheme": "Bearded Theme Vivid Black",
+    "workbench.iconTheme": "bearded-icons",
     // =========================================================================
     // EDITOR & WINDOW SETTINGS
     // =========================================================================
     "window.titleBarStyle": "custom",
-    "editor.fontFamily": "'Berkeley Mono', 'SpaceMono Nerd Font', 'FiraCode Nerd Font', 'Ubuntu Mono', monospace",
+    "window.zoomLevel": 2.0,
+    "editor.fontFamily": "'TX-02', 'Ubuntu Mono', monospace",
     "workbench.sideBar.location": "right",
     "editor.minimap.enabled": false,
     "editor.lineNumbers": "relative",
-    "window.zoomLevel": 2.0,
     "workbench.startupEditor": "none",
     "editor.wordWrap": "on",
     "editor.lineHeight": 1.5,
@@ -56,16 +36,19 @@
     "notebook.formatOnSave.enabled": false,
     "editor.suggestSelection": "first",
     "editor.detectIndentation": false,
-    "editor.parameterHints.enabled": false,
+    "editor.parameterHints.enabled": true,
+    "editor.occurrencesHighlight": "off",
     "editor.renderWhitespace": "trailing",
     "debug.inlineValues": "on",
-    "editor.rulers": [80],
-    "glassit.alpha": 255, // Transparency
-
+    "editor.rulers": [
+        80
+    ],
+    "glassit.alpha": 250, // Transparency
     // =========================================================================
     // FONT & TABS
     // =========================================================================
     "editor.fontSize": 15,
+    "editor.inlayHints.fontSize": 15,
     "terminal.integrated.fontSize": 15,
     "scm.inputFontSize": 15,
     "debug.console.fontSize": 15,
@@ -74,25 +57,22 @@
     "editor.tabSize": 4,
     "notebook.markup.fontSize": 15,
     "notebook.output.fontSize": 15,
-
     // =========================================================================
     // TERMINAL
     // =========================================================================
-    "terminal.integrated.fontFamily": "'Berkeley Mono', 'SpaceMono Nerd Font', 'FiraCode Nerd Font', 'monospace'",
+    "terminal.integrated.fontFamily": "'TX-02', 'Ubuntu Mono', monospace",
     "terminal.integrated.gpuAcceleration": "on",
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.copyOnSelection": true,
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.defaultProfile.linux": "bash",
     "terminal.integrated.defaultProfile.windows": "Git Bash",
-
     // =========================================================================
     // SCROLL SETTINGS
     // =========================================================================
     "editor.scrollBeyondLastLine": true,
     "editor.scrollBeyondLastColumn": 0,
     "editor.cursorSurroundingLines": 10,
-
     // =========================================================================
     // ANIMATION
     // =========================================================================
@@ -100,7 +80,6 @@
     "terminal.integrated.smoothScrolling": true,
     "editor.smoothScrolling": true,
     "editor.cursorSmoothCaretAnimation": "on",
-
     // =========================================================================
     // VIM (GENERAL)
     // =========================================================================
@@ -112,245 +91,211 @@
     "vim.surround": true,
     "vim.highlightedyank.enable": true,
     "vim.highlightedyank.color": "#111111",
-
-    // =========================================================================
-    // VIM COLORS
-    // =========================================================================
-    "vim.statusBarColorControl": true,
-    "vim.statusBarColors.normal": [
-      "#7aa2f7",
-      "#1a1b26"
-    ],
-    "vim.statusBarColors.insert": [
-      "#9ece6a",
-      "#24283b"
-    ],
-    "vim.statusBarColors.visual": [
-      "#f7768e",
-      "#1a1b26"
-    ],
-    "vim.statusBarColors.visualline": [
-      "#2ac3de",
-      "#24283b"
-    ],
-    "vim.statusBarColors.visualblock": [
-      "#e0af68",
-      "#1a1b26"
-    ],
-    "vim.statusBarColors.replace": [
-      "#73daca",
-      "#24283b"
-    ],
-    "vim.statusBarColors.commandlineinprogress": [
-      "#7dcfff",
-      "#1a1b26"
-    ],
-    "vim.statusBarColors.searchinprogressmode": [
-      "#ff9e64",
-      "#24283b"
-    ],
-    "vim.statusBarColors.easymotionmode": [
-      "#b4f9f8",
-      "#1a1b26"
-    ],
-    "vim.statusBarColors.easymotioninputmode": [
-      "#bb9af7",
-      "#24283b"
-    ],
-    "vim.statusBarColors.surroundinputmode": [
-      "#c0caf5",
-      "#1a1b26"
-    ],
+    //"vim.statusBarColorControl": true,
     "workbench.colorCustomizations": {
-      "statusBar.background": "#7aa2f7",
-      "statusBar.noFolderBackground": "#7aa2f7",
-      "statusBar.debuggingBackground": "#7aa2f7",
-      "statusBar.foreground": "#1a1b26",
-      "statusBar.debuggingForeground": "#1a1b26"
+        "statusBar.background": "#1a1a1a",
+        "statusBar.noFolderBackground": "#1a1a1a",
+        "statusBar.debuggingBackground": "#1a1a1a",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingForeground": "#ffffff"
     },
     // =========================================================================
     // VIM (INSERT MODE)
     // =========================================================================
     "vim.insertModeKeyBindings": [
-      {
-        // J+K TO ESCAPE
-        "before": [
-          "j",
-          "k"
-        ],
-        "after": [
-          "<Esc>"
-        ]
-      }
+        {
+            // J+K TO ESCAPE
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
     ],
     // =========================================================================
     // VIM (NORMAL MODE)
     // =========================================================================
     "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        // OPEN TERMINAL
-        "before": [
-          "<leader>",
-          "t"
-        ],
-        "commands": [
-          "workbench.action.terminal.toggleTerminal"
-        ]
-      },
-      {
-        // OPEN EXPLORER
-        "before": [
-          "<leader>",
-          "e"
-        ],
-        "commands": [
-          "workbench.view.explorer"
-        ]
-      },
-      {
-        // OPEN SOURCE CONTROL
-        "before": [
-          "<leader>",
-          "s"
-        ],
-        "commands": [
-          "workbench.view.scm"
-        ]
-      },
-      {
-        // CLOSE EVERYTHING EXCEPT EDITOR
-        "before": [
-          "<leader>",
-          "x"
-        ],
-        "commands": [
-          "workbench.action.closeSidebar",
-          "workbench.action.terminal.kill",
-          "workbench.action.closePanel"
-        ]
-      },
-      {
-        // CLOSE EDITOR TAB (SAVE FIRST!)
-        "before": [
-          "<leader>",
-          "c"
-        ],
-        "commands": [
-          "workbench.action.closeActiveEditor"
-        ]
-      },
-      {
-        // SHOW DEFINITION PREVIEW
-        "before": [
-          "g",
-          "h"
-        ],
-        "commands": [
-          "editor.action.showDefinitionPreviewHover"
-        ]
-      },
-      {
-        // GLOBAL FIND
-        "before": [
-          "<leader>",
-          "f"
-        ],
-        "commands": [
-          "workbench.action.findInFiles"
-        ]
-      }
+        {
+            // OPEN TERMINAL
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        {
+            // OPEN EXPLORER
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        {
+            // OPEN SOURCE CONTROL
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },
+        {
+            // CLOSE EVERYTHING EXCEPT EDITOR
+            "before": [
+                "<leader>",
+                "x"
+            ],
+            "commands": [
+                "workbench.action.closeSidebar",
+                "workbench.action.terminal.kill",
+                "workbench.action.closePanel"
+            ]
+        },
+        {
+            // CLOSE EDITOR TAB (SAVE FIRST!)
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            // SHOW DEFINITION PREVIEW
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        },
+        {
+            // GLOBAL FIND
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        }
     ],
     // =========================================================================
     // FILE ASSOCIATIONS
     // =========================================================================
     "files.associations": {
-      "*.json": "jsonc"
+        "*.json": "jsonc"
     },
     // =========================================================================
     // MARKDOWN
     // =========================================================================
     "[markdown]": {
-      "editor.wordWrap": "on",
-      "editor.formatOnSave": false,
-      "editor.tabSize": 4
+        "editor.wordWrap": "on",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 4
     },
     // =========================================================================
     // WEB TECHNOLOGIES
     // =========================================================================
     "[html]": {
-      "editor.tabSize": 4
+        "editor.tabSize": 4
     },
     "[scss]": {
-      "editor.tabSize": 4
+        "editor.tabSize": 4
     },
     "[javascript]": {
-      "editor.tabSize": 2
+        "editor.tabSize": 4
     },
     "[typescript]": {
-      "editor.tabSize": 2,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[javascriptreact]": {
-      "editor.tabSize": 2,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[typescriptreact]": {
-      "editor.tabSize": 2,
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
     "[json]": {
-      "editor.tabSize": 2,
-      "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[jsonc]": {
-      "editor.tabSize": 2,
-      "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "[css]": {
-      "editor.tabSize": 4,
-      "editor.defaultFormatter": "vscode.css-language-features"
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.css-language-features"
     },
-
     // =========================================================================
     // PROGRAMMING LANGUAGES
     // =========================================================================
     "[csharp]": {
-      "editor.tabSize": 4,
-      "editor.defaultFormatter": "ms-dotnettools.csharp", 
-      "editor.semanticHighlighting.enabled": true,
-      "editor.maxTokenizationLineLength": 2500
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "ms-dotnettools.csharp",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.maxTokenizationLineLength": 2500
     },
     "[rust]": {
-      "editor.tabSize": 4,
-      "editor.defaultFormatter": "rust-lang.rust-analyzer",
-      "editor.semanticHighlighting.enabled": true
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.semanticHighlighting.enabled": true
     },
     "[c]": {
-      "editor.tabSize": 4,
-      "editor.semanticHighlighting.enabled": true
+        "editor.tabSize": 4,
+        "editor.semanticHighlighting.enabled": true
     },
     "[cpp]": {
-      "editor.tabSize": 4,
-      "editor.wordBasedSuggestions": "off",
-      "editor.suggest.insertMode": "replace",
-      "editor.semanticHighlighting.enabled": true
+        "editor.tabSize": 4,
+        "editor.wordBasedSuggestions": "off",
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
+    },
+    "[go]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "golang.go",
+        "editor.formatOnSave": true,
+        "editor.semanticHighlighting.enabled": true,
+    },
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.compositeLiteralTypes": true,
+    "go.inlayHints.functionTypeParameters": true,
+    "go.inlayHints.parameterNames": true,
+    "go.inlayHints.rangeVariableTypes": true,
+    "go.inlayHints.constantValues": true,
+    "gopls": {
+        "ui.semanticTokens": true
     },
     // =========================================================================
     // SCRIPTING
     // =========================================================================
     "[bash]": {
-      "editor.tabSize": 4
+        "editor.tabSize": 4
     },
     // =========================================================================
     // PYTHON / DS
     // =========================================================================
     "[python]": {
-      "editor.tabSize": 4,
-      "editor.formatOnSave": true,
-      "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-python.black-formatter"
     },
     // =========================================================================
     // FRIEND ZONE
     // =========================================================================
     "telemetry.telemetryLevel": "off",
-  }
+}
