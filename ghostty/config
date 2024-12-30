@@ -1,0 +1,13 @@
+title = "👻"
+theme = Glacier
+background-opacity = 0.95
+
+font-size = 15
+font-family = "Hack Nerd Font"
+font-family = "TX-02"
+font-family = "Ubuntu Mono"
+
+mouse-hide-while-typing = true
+mouse-scroll-multiplier = 2
+
+copy-on-select = true
