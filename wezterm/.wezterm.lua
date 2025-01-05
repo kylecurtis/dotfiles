@@ -14,32 +14,32 @@ end
 config.webgpu_power_preference = "HighPerformance"
 
 -- DEFAULT PROGRAM (SHELL)
-config.default_prog = { "C:/Program Files/Git/bin/bash.exe", "-l" } -- GIT BASH
--- config.default_prog = { '/usr/local/bin/bash', '-l'} -- BASH SHELL
+-- config.default_prog = { "C:/Program Files/Git/bin/bash.exe", "-l" } -- GIT BASH
+-- config.default_prog = { '/usr/bin/bash', '-l'} -- BASH SHELL
 -- config.default_prog = { '/usr/local/bin/zsh', '-l'} -- ZSHELL
 -- config.default_prog = { '/usr/local/bin/fish', '-l'} -- FISH SHELL
 -- config.default_domain = 'WSL:Ubuntu' -- WSL (UBUNTU)
 -- config.default_domain = 'WSL:Arch' -- WSL (ARCH)
 
 -- WINDOW AND THEMES
-config.color_scheme = "GruvboxDarkHard"
-config.window_background_opacity = 0.98
+config.color_scheme = "Nocturnal Winter"
+config.window_background_opacity = 0.90
 config.window_padding = { left = 0, right = 0, top = 0, bottom = 0 }
 config.enable_scroll_bar = false
 config.automatically_reload_config = true
 
 -- FONTS & LINES
-config.font = wezterm.font("Berkeley Mono")
-config.font_size = 15.0
-config.cell_width = 1.3
-config.line_height = 1.3
+-- config.font = wezterm.font("TX-02")
+config.font_size = 14.0
+config.cell_width = 1.0
+config.line_height = 1.0
 config.adjust_window_size_when_changing_font_size = false
 config.harfbuzz_features = { "calt=0" } -- disable ligatures
 
 -- FPS AND ANIMATION
 config.max_fps = 60
 config.animation_fps = 60
-config.default_cursor_style = "BlinkingBar"
+config.default_cursor_style = "SteadyBar"
 config.cursor_blink_ease_in = "Linear"
 config.cursor_blink_ease_out = "Linear"
 config.cursor_blink_rate = 500
@@ -48,7 +48,7 @@ config.cursor_blink_rate = 500
 config.use_fancy_tab_bar = true
 config.enable_tab_bar = true
 config.show_tabs_in_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = false
+config.hide_tab_bar_if_only_one_tab = true
 config.show_new_tab_button_in_tab_bar = true
 config.show_tab_index_in_tab_bar = true
 config.tab_bar_at_bottom = false
@@ -95,3 +95,4 @@ config.keys = {
 
 -- WEZTERM SETUP (END)
 return config
+
