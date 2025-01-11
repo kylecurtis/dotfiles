@@ -15,7 +15,7 @@
     // =========================================================================
     // THEME & ICON SETTINGS
     // =========================================================================
-    "workbench.colorTheme": "Bearded Theme Vivid Black",
+    "workbench.colorTheme": "Horizon Bold",
     "workbench.iconTheme": "bearded-icons",
     // =========================================================================
     // EDITOR & WINDOW SETTINGS
@@ -43,7 +43,7 @@
     "editor.rulers": [
         80
     ],
-    "glassit.alpha": 250, // Transparency
+    "glassit.alpha": 240, // Transparency
     // =========================================================================
     // FONT & TABS
     // =========================================================================
@@ -191,6 +191,7 @@
             ]
         }
     ],
+    "prettier.tabWidth": 4,
     // =========================================================================
     // FILE ASSOCIATIONS
     // =========================================================================
@@ -228,6 +229,10 @@
     "[typescriptreact]": {
         "editor.tabSize": 4,
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[astro]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "astro-build.astro-vscode"
     },
     "[json]": {
         "editor.tabSize": 4,
@@ -292,7 +297,7 @@
     "[python]": {
         "editor.tabSize": 4,
         "editor.formatOnSave": true,
-        "editor.defaultFormatter": "ms-python.black-formatter"
+        "editor.defaultFormatter": "charliermarsh.ruff"
     },
     // =========================================================================
     // FRIEND ZONE
