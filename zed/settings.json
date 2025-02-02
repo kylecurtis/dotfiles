@@ -1,0 +1,160 @@
+// MY ZED CONFIG
+// github.com/kylecurtis/dotfiles
+// =============================================================================
+{
+    // VIM MODE
+    "vim_mode": true,
+
+    // FONT & LINE SETTINGS
+    // =========================================================================
+    "buffer_font_family": "TX-02",
+    "buffer_font_fallbacks": ["Zed Plex Mono", "Ubuntu Mono"],
+
+    // FONT SETTINGS
+    "ui_font_size": 19,
+    "buffer_font_size": 19,
+    "buffer_font_weight": 400,
+
+    // LINE SETTINGS
+    "buffer_line_height": { "custom": 1.6 },
+    "current_line_highlight": "none",
+
+    // DISABLE LIGATURES
+    "ui_font_features": {
+        "calt": false
+    },
+
+    // CURSOR SETTINGS
+    // =========================================================================
+    "cursor_blink": false,
+    "cursor_shape": "block",
+
+    // TAB & WRAP SETTINGS
+    // =========================================================================
+    "tab_size": 4,
+    "wrap_guides": [80],
+    "show_wrap_guides": true,
+
+    // SCROLLBAR SETTINGS
+    // =========================================================================
+    "scrollbar": {
+        "show": "always",
+        "cursors": false,
+        "git_diff": false,
+        "search_results": false,
+        "selected_symbol": false,
+        "diagnostics": "all",
+        "axes": {
+            "horizontal": true,
+            "vertical": true
+        }
+    },
+
+    // TAB SETTINGS
+    // =========================================================================
+    "tabs": {
+        "close_position": "right",
+        "file_icons": true,
+        "git_status": true,
+        "activate_on_close": "history",
+        "always_show_close_button": false
+    },
+
+    // DARK THEME SETTINGS
+    // =========================================================================
+    "theme": {
+        "mode": "dark",
+        "light": "Tokyo Night",
+        "dark": "Tokyo Night"
+    },
+
+    // INLAY HINT SETTINGS
+    // =========================================================================
+    "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true,
+        "show_background": false,
+        "edit_debounce_ms": 700,
+        "scroll_debounce_ms": 50
+    },
+
+    // PROJECT PANEL SETTINGS
+    // =========================================================================
+    "project_panel": {
+        "button": true,
+        "default_width": 240,
+        "dock": "left",
+        "entry_spacing": "comfortable",
+        "file_icons": true,
+        "folder_icons": true,
+        "git_status": true,
+        "indent_size": 20,
+        "indent_guides": true,
+        "auto_reveal_entries": true,
+        "auto_fold_dirs": true,
+        "scrollbar": {
+            "show": null
+        },
+        "indent_guides": {
+            "show": "always"
+        }
+    },
+
+    // GIT SETTINGS
+    // =========================================================================
+    "git": {
+        "git_gutter": "hide",
+        "inline_blame": {
+            "enabled": false
+        }
+    },
+
+    // EXPERIMENTAL THEME SETTINGS (TOP DOWN)
+    // =========================================================================
+    "experimental.theme_overrides": {
+        // TITLE BAR
+        "title_bar.background": "#11111bda",
+        "title_bar.inactive_background": "#11111bda",
+
+        // TABS
+        "tab_bar.background": "#00000000",
+        "tab.active_background": "#00000000",
+        "tab.inactive_background": "#00000000",
+
+        // TOOLBAR
+        "toolbar.background": "#00000000",
+        "border.variant": "#00000000",
+
+        // PANEL
+        "panel.background": "#00000000",
+
+        // GUTTER
+        "editor.gutter.background": "#00000000",
+
+        // BACKGROUNDS
+        "background.appearance": "transparent",
+        "background": "#11111bda",
+        "editor.background": "#00000000",
+        "terminal.background": "#00000000",
+        "editor.active_line.background": "#00000000",
+
+        // STATUS BAR
+        "status_bar.background": "#11111bda",
+
+        // SCROLLBAR
+        "scrollbar.track.border": "#00000000"
+    },
+
+    // FORMAT SETTINGS
+    // =========================================================================
+    "format_on_save": "on",
+
+    // TELEMENTRY SETTINGS
+    // =========================================================================
+    "telemetry": {
+        "metrics": false,
+        "diagnostics": false
+    }
+}
