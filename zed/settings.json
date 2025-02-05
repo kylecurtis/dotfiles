@@ -4,37 +4,37 @@
 {
     // VIM MODE
     "vim_mode": true,
-
     // FONT & LINE SETTINGS
     // =========================================================================
     "buffer_font_family": "TX-02",
-    "buffer_font_fallbacks": ["Zed Plex Mono", "Ubuntu Mono"],
-
+    "buffer_font_fallbacks": [
+        "Zed Plex Mono",
+        "Ubuntu Mono"
+    ],
     // FONT SETTINGS
     "ui_font_size": 19,
     "buffer_font_size": 19,
     "buffer_font_weight": 400,
-
     // LINE SETTINGS
-    "buffer_line_height": { "custom": 1.6 },
+    "buffer_line_height": {
+        "custom": 1.6
+    },
     "current_line_highlight": "none",
-
     // DISABLE LIGATURES
     "ui_font_features": {
         "calt": false
     },
-
     // CURSOR SETTINGS
     // =========================================================================
     "cursor_blink": false,
     "cursor_shape": "block",
-
     // TAB & WRAP SETTINGS
     // =========================================================================
     "tab_size": 4,
-    "wrap_guides": [80],
+    "wrap_guides": [
+        80
+    ],
     "show_wrap_guides": true,
-
     // SCROLLBAR SETTINGS
     // =========================================================================
     "scrollbar": {
@@ -49,7 +49,6 @@
             "vertical": true
         }
     },
-
     // TAB SETTINGS
     // =========================================================================
     "tabs": {
@@ -59,7 +58,6 @@
         "activate_on_close": "history",
         "always_show_close_button": false
     },
-
     // DARK THEME SETTINGS
     // =========================================================================
     "theme": {
@@ -67,7 +65,6 @@
         "light": "Tokyo Night",
         "dark": "Tokyo Night"
     },
-
     // INLAY HINT SETTINGS
     // =========================================================================
     "inlay_hints": {
@@ -79,7 +76,6 @@
         "edit_debounce_ms": 700,
         "scroll_debounce_ms": 50
     },
-
     // PROJECT PANEL SETTINGS
     // =========================================================================
     "project_panel": {
@@ -101,7 +97,6 @@
             "show": "always"
         }
     },
-
     // GIT SETTINGS
     // =========================================================================
     "git": {
@@ -110,51 +105,78 @@
             "enabled": false
         }
     },
-
     // EXPERIMENTAL THEME SETTINGS (TOP DOWN)
     // =========================================================================
     "experimental.theme_overrides": {
         // TITLE BAR
-        "title_bar.background": "#11111bda",
-        "title_bar.inactive_background": "#11111bda",
-
+        "title_bar.background": "#11111bed",
+        "title_bar.inactive_background": "#11111bed",
         // TABS
         "tab_bar.background": "#00000000",
         "tab.active_background": "#00000000",
         "tab.inactive_background": "#00000000",
-
         // TOOLBAR
         "toolbar.background": "#00000000",
         "border.variant": "#00000000",
-
         // PANEL
         "panel.background": "#00000000",
-
         // GUTTER
         "editor.gutter.background": "#00000000",
-
         // BACKGROUNDS
         "background.appearance": "transparent",
-        "background": "#11111bda",
+        "background": "#11111bed",
         "editor.background": "#00000000",
         "terminal.background": "#00000000",
         "editor.active_line.background": "#00000000",
-
         // STATUS BAR
-        "status_bar.background": "#11111bda",
-
+        "status_bar.background": "#11111bed",
         // SCROLLBAR
         "scrollbar.track.border": "#00000000"
     },
-
     // FORMAT SETTINGS
     // =========================================================================
     "format_on_save": "on",
-
     // TELEMENTRY SETTINGS
     // =========================================================================
     "telemetry": {
         "metrics": false,
         "diagnostics": false
+    },
+    // LANGUAGE SETTINGS
+    // =========================================================================
+    "languages": {
+        "Python": {
+            "language_servers": [
+                "pyright",
+                "ruff"
+            ],
+            "format_on_save": "on",
+            "formatter": [
+                {
+                    "code_actions": {
+                        // Fix all auto-fixable lint violations
+                        "source.fixAll.ruff": true,
+                        // Organize imports
+                        "source.organizeImports.ruff": true
+                    }
+                }
+            ]
+        }
+    },
+    "autosave": "on_focus_change",
+    "lsp": {
+        "ruff": {
+            "initialization_options": {
+                "settings": {
+                    // Ruff server settings goes here
+                    "lineLength": 80,
+                    "lint": {
+                        "extendSelect": [
+                            "I"
+                        ]
+                    }
+                }
+            }
+        }
     }
 }
