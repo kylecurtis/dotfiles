@@ -1,0 +1,65 @@
+# =============================================================================
+# A SIMPLE & MINIMAL RUFF CONFIGURATION TEMPLATE
+# =============================================================================
+
+# Same as Black
+line-length = 88
+indent-width = 4
+
+# Target Minimum Python version (3.9)
+target-version = "py39"
+
+# =============================================================================
+[lint]
+# =============================================================================
+
+select = [
+    "F",   # pyflakes (undefined names, unused imports, etc.)
+    "E",   # pycodestyle errors (whitespace, indentation, etc.)
+    "W",   # pycodestyle warnings
+    "I",   # isort (import sorting)
+    "N",   # pep8-naming (naming conventions)
+    "UP",  # pyupgrade (modern syntax)
+    "B",   # flake8-bugbear (common bugs and anti-patterns)
+    "C4",  # flake8-comprehensions (better list/dict/set comprehensions)
+    "SIM", # flake8-simplify (code simplification suggestions)
+    "ARG", # flake8-unused-arguments
+    # "T20", # flake8-print (avoid debug print statements)
+    "RUF", # ruff-specific rules
+]
+
+# Common ignores
+ignore = [
+    "E203", # Whitespace before ':'
+    "T20",  # Allow print statements (remove if set above)
+]
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+# =============================================================================
+[format]
+# =============================================================================
+
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Skip format strings from normalization during formatting
+docstring-code-format = true
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+# =============================================================================
+[per-file-ignores]
+# =============================================================================
+
+"__init__.py" = ["F401"]      # Allow unused imports in __init__.py
+"test_*.py" = ["B018", "T20"] # Allow useless expressions and prints in tests
+"**/tests/*.py" = ["T20"]     # Allow prints in all test files
