@@ -1,0 +1,46 @@
+# ENVIRONMENT
+# =================================================
+[env]
+TERM = "xterm-256color"
+
+# WINDOW 
+# =================================================
+[window]
+opacity = 0.95
+dynamic_title = false
+title = "(✖╭╮✖)"
+
+[window.padding]
+x = 5 
+y = 5 
+
+# FONT
+# =================================================
+[font]
+size = 14.0
+
+[font.normal]
+family = "Hurmit Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "Hurmit Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "Hurmit Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "Hurmit Nerd Font"
+style = "Bold Italic"
+
+[font.offset]
+x = 0
+y = 0
+
+# HISTORY
+# =================================================
+[scrolling]
+history = 5000
+
