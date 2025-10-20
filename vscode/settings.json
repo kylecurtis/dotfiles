@@ -1,0 +1,279 @@
+{
+    // =========================================================================
+    // THEME & ICON SETTINGS
+    // =========================================================================
+    "workbench.colorTheme": "Horizon Bold",
+    "workbench.iconTheme": "bearded-icons",
+    // =========================================================================
+    // EDITOR & WINDOW SETTINGS
+    // =========================================================================
+    "window.titleBarStyle": "custom",
+    "window.zoomLevel": 1.0,
+    "editor.fontFamily": "'Berkeley Mono', 'Hurmit Nerd Font', 'Ubuntu Mono', monospace",
+    "workbench.sideBar.location": "right",
+    "editor.minimap.enabled": false,
+    "editor.lineNumbers": "relative",
+    "workbench.startupEditor": "none",
+    "editor.wordWrap": "on",
+    "editor.lineHeight": 1.5,
+    "editor.scrollbar.vertical": "visible",
+    "editor.scrollbar.verticalScrollbarSize": 15,
+    "breadcrumbs.enabled": false,
+    "editor.formatOnSave": false,
+    "notebook.formatOnSave.enabled": false,
+    "editor.suggestSelection": "first",
+    "editor.detectIndentation": false,
+    "editor.parameterHints.enabled": true,
+    "editor.occurrencesHighlight": "off",
+    "editor.renderWhitespace": "trailing",
+    "debug.inlineValues": "on",
+    "editor.rulers": [
+        80
+    ],
+    "glassit.alpha": 240, // Transparency
+    // =========================================================================
+    // FONT & TABS
+    // =========================================================================
+    "editor.fontSize": 15,
+    "editor.inlayHints.fontSize": 15,
+    "terminal.integrated.fontSize": 15,
+    "scm.inputFontSize": 15,
+    "debug.console.fontSize": 15,
+    "markdown.preview.fontSize": 15,
+    "interactiveSession.editor.fontSize": 15,
+    "editor.tabSize": 4,
+    "notebook.markup.fontSize": 15,
+    "notebook.output.fontSize": 15,
+    // =========================================================================
+    // TERMINAL
+    // =========================================================================
+    "terminal.integrated.fontFamily": "'Berkeley Mono', 'Hurmit Nerd Font', 'Ubuntu Mono', monospace",
+    "terminal.integrated.gpuAcceleration": "on",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.defaultProfile.linux": "bash",
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    // =========================================================================
+    // SCROLL SETTINGS
+    // =========================================================================
+    "editor.scrollBeyondLastLine": true,
+    "editor.scrollBeyondLastColumn": 0,
+    "editor.cursorSurroundingLines": 10,
+    // =========================================================================
+    // ANIMATION
+    // =========================================================================
+    "editor.cursorBlinking": "phase",
+    "terminal.integrated.smoothScrolling": true,
+    "editor.smoothScrolling": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    // =========================================================================
+    // VIM (GENERAL)
+    // =========================================================================
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
+    "vim.surround": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#111111",
+    //"vim.statusBarColorControl": true,
+    "workbench.colorCustomizations": {
+        "statusBar.background": "#1a1a1a",
+        "statusBar.noFolderBackground": "#1a1a1a",
+        "statusBar.debuggingBackground": "#1a1a1a",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingForeground": "#ffffff"
+    },
+    // =========================================================================
+    // VIM (INSERT MODE)
+    // =========================================================================
+    "vim.insertModeKeyBindings": [
+        {
+            // J+K TO ESCAPE
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    // =========================================================================
+    // VIM (NORMAL MODE)
+    // =========================================================================
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            // OPEN TERMINAL
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
+            ]
+        },
+        {
+            // OPEN EXPLORER
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        },
+        {
+            // OPEN SOURCE CONTROL
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                "workbench.view.scm"
+            ]
+        },
+        {
+            // CLOSE EVERYTHING EXCEPT EDITOR
+            "before": [
+                "<leader>",
+                "x"
+            ],
+            "commands": [
+                "workbench.action.closeSidebar",
+                "workbench.action.terminal.kill",
+                "workbench.action.closePanel"
+            ]
+        },
+        {
+            // CLOSE EDITOR TAB (SAVE FIRST!)
+            "before": [
+                "<leader>",
+                "c"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            // SHOW DEFINITION PREVIEW
+            "before": [
+                "g",
+                "h"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        },
+        {
+            // GLOBAL FIND
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        }
+    ],
+    "prettier.tabWidth": 4,
+    // =========================================================================
+    // FILE ASSOCIATIONS
+    // =========================================================================
+    "files.associations": {
+        "*.json": "jsonc"
+    },
+    // =========================================================================
+    // MARKDOWN
+    // =========================================================================
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.formatOnSave": false,
+        "editor.tabSize": 4
+    },
+    // =========================================================================
+    // WEB TECHNOLOGIES
+    // =========================================================================
+    "[html]": {
+        "editor.tabSize": 4
+    },
+    "[scss]": {
+        "editor.tabSize": 4
+    },
+    "[javascript]": {
+        "editor.tabSize": 4
+    },
+    "[typescript]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascriptreact]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[astro]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "astro-build.astro-vscode"
+    },
+    "[json]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[css]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    // =========================================================================
+    // PROGRAMMING LANGUAGES
+    // =========================================================================
+    "[csharp]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "ms-dotnettools.csharp",
+        "editor.semanticHighlighting.enabled": true,
+        "editor.maxTokenizationLineLength": 2500
+    },
+    "[rust]": {
+        "editor.tabSize": 4,
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.semanticHighlighting.enabled": true
+    },
+    "[c]": {
+        "editor.tabSize": 4,
+        "editor.semanticHighlighting.enabled": true
+    },
+    "[cpp]": {
+        "editor.tabSize": 4,
+        "editor.wordBasedSuggestions": "off",
+        "editor.suggest.insertMode": "replace",
+        "editor.semanticHighlighting.enabled": true
+    },
+    // =========================================================================
+    // SCRIPTING
+    // =========================================================================
+    "[bash]": {
+        "editor.tabSize": 4
+    },
+    // =========================================================================
+    // PYTHON / DS
+    // =========================================================================
+    "[python]": {
+        "editor.tabSize": 4,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff"
+    },
+    // =========================================================================
+    // FRIEND ZONE
+    // =========================================================================
+    "telemetry.telemetryLevel": "off",
+    "chat.commandCenter.enabled": false,
+}
