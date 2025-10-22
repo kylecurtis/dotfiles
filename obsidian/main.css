@@ -1,0 +1,174 @@
+/* =============================================================================
+CUSTOM BACKGROUND COLOR
+============================================================================= */
+
+/* MAIN BACKGROUND */
+body {
+    --background-primary: #16161d !important;
+    --background-secondary: #16161d !important;
+}
+
+/* WORKSPACE BACKGROUND */
+.workspace {
+    background-color: #16161d !important;
+}
+
+/* NOTE CONTENT BACKGROUND */
+.markdown-preview-view,
+.markdown-rendered,
+.markdown-source-view.mod-cm6 .cm-content {
+    background-color: #16161d !important;
+}
+
+/* SIDEBAR BACKGROUND */
+.workspace-leaf-content,
+.workspace-split.mod-root,
+.workspace-tabs {
+    background-color: #16161d !important;
+}
+
+/* =============================================================================
+GLOBAL FONTS & SIZES (PREVIEW/READING ONLY)
+============================================================================= */
+
+.markdown-preview-view,
+.markdown-rendered {
+    font-family: Atkinson Hyperlegible !important;
+    font-size: 1rem !important;
+}
+
+.markdown-preview-view *,
+.markdown-rendered * {
+    font-family: Atkinson Hyperlegible !important;
+    font-size: 1rem !important;
+}
+
+/* =============================================================================
+HEADING STYLES
+============================================================================= */
+
+/* REMOVE HEADING BORDERS */
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.markdown-preview-view h3,
+.markdown-preview-view h4,
+.markdown-preview-view h5,
+.markdown-preview-view h6,
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6,
+.markdown-source-view h1,
+.markdown-source-view h2,
+.markdown-source-view h3,
+.markdown-source-view h4,
+.markdown-source-view h5,
+.markdown-source-view h6 {
+    border: none !important;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: 0;
+    color: #7aa2f7;
+    background-color: #7aa2f7;
+    background-image: linear-gradient(
+        62deg,
+        #87c2fd 0%,
+        #dcb9fc 100%
+    ) !important;
+}
+
+/* OVERRIDE THEME HEADER UNDERLINES IN EDITING VIEW */
+.markdown-source-view.mod-cm6 .HyperMD-header.HyperMD-header-1,
+.markdown-source-view.mod-cm6 .HyperMD-header.HyperMD-header-2,
+.markdown-source-view.mod-cm6 .HyperMD-header.HyperMD-header-3,
+.markdown-source-view.mod-cm6 .HyperMD-header.HyperMD-header-4,
+.markdown-source-view.mod-cm6 .HyperMD-header.HyperMD-header-5,
+.markdown-source-view.mod-cm6 .HyperMD-header.HyperMD-header-6 {
+    border: none !important;
+    border-bottom: none !important;
+    border-image: none !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-header,
+.markdown-source-view .cm-header,
+.cm-s-obsidian .cm-header {
+    border: none !important;
+    border-bottom: none !important;
+}
+
+/* HEADING SIZES - PREVIEW & READING */
+.markdown-preview-view h1,
+.markdown-rendered h1 {
+    font-size: 2rem !important;
+}
+
+.markdown-preview-view h2,
+.markdown-rendered h2 {
+    font-size: 1.8rem !important;
+}
+
+.markdown-preview-view h3,
+.markdown-rendered h3 {
+    font-size: 1.6rem !important;
+}
+
+.markdown-preview-view h4,
+.markdown-rendered h4 {
+    font-size: 1.4rem !important;
+}
+
+.markdown-preview-view h5,
+.markdown-rendered h5 {
+    font-size: 1.2rem !important;
+}
+
+/* =============================================================================
+CODE BLOCK FONTS (PREVIEW/READING ONLY)
+============================================================================= */
+
+.markdown-preview-view pre,
+.markdown-rendered pre {
+    font-family: Hurmit Nerd Font !important;
+    font-size: 1rem !important;
+    margin-top: 32px !important;
+    margin-bottom: 32px !important;
+}
+
+.markdown-preview-view pre *,
+.markdown-rendered pre * {
+    font-family: Hurmit Nerd Font !important;
+    font-size: 1rem !important;
+}
+
+/* =============================================================================
+TABLE STYLES (PREVIEW/READING ONLY)
+============================================================================= */
+
+.markdown-preview-view table,
+.markdown-rendered table {
+    width: 100% !important;
+    table-layout: auto !important;
+}
+
+.markdown-preview-view table *,
+.markdown-rendered table * {
+    border: 2px solid #313244 !important;
+}
+
+/* =============================================================================
+HORIZONTAL RULES (PREVIEW/READING ONLY)
+============================================================================= */
+
+.markdown-preview-view hr,
+.markdown-rendered hr {
+    border: 2px solid #313244 !important;
+    box-shadow: 0px 0px 20px 5px #1e1e2e, 0px 0px 15px 3px #1e1e2e;
+}
+
+.markdown-preview-view hr::after,
+.markdown-rendered hr::after {
+    content: none !important;
+}

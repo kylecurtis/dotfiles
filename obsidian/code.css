@@ -1,0 +1,68 @@
+/* =============================================================================
+ANIMATED CODE BLOCK BORDERS
+============================================================================= */
+
+.markdown-preview-view pre,
+.markdown-rendered pre {
+    position: relative !important;
+    border-radius: 8px !important;
+    overflow: visible !important;
+    z-index: 1 !important;
+    will-change: box-shadow !important;
+    transform: translateZ(0) !important;
+    backface-visibility: hidden !important;
+    animation: shadow-pulse 60s linear infinite !important;
+}
+
+.markdown-preview-view pre::before,
+.markdown-rendered pre::before {
+    content: "" !important;
+    position: absolute !important;
+    inset: -3px !important;
+    border-radius: 8px !important;
+    padding: 3px !important;
+    background: conic-gradient(
+        from var(--angle),
+        #d27e99 0deg,
+        #957fb8 180deg,
+        #d27e99 360deg
+    ) !important;
+    -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0) !important;
+    -webkit-mask-composite: xor !important;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0) !important;
+    mask-composite: exclude !important;
+    z-index: -1 !important;
+    will-change: transform !important; /* Optimize rotation */
+    transform: translateZ(0) !important; /* Force GPU acceleration */
+    backface-visibility: hidden !important;
+    animation: rotateAngle 2s linear infinite !important;
+    pointer-events: none !important;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+@keyframes rotateAngle {
+    0% {
+        --angle: 0deg;
+    }
+    100% {
+        --angle: 360deg;
+    }
+}
+
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0px 0px 12px 5px #d27e99, 0px 0px 10px 3px #d27e99;
+    }
+    50% {
+        box-shadow: 0px 0px 12px 5px #2d4f67, 0px 0px 10px 3px #2d4f67;
+    }
+    100% {
+        box-shadow: 0px 0px 12px 5px #d27e99, 0px 0px 10px 3px #d27e99;
+    }
+}
