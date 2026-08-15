@@ -1,0 +1,99 @@
+// ZED SETTINGS
+{
+    // NO AI & TELEMETRY
+    // =========================================================================
+    "disable_ai": true,
+
+    "telemetry": {
+        "diagnostics": false,
+        "metrics": false,
+    },
+
+    // VIM & THEME SETTINGS
+    // =========================================================================
+    "vim_mode": true,
+
+    "theme": {
+        "mode": "dark",
+        "light": "Kanagawa Wave - No Italics",
+        "dark": "Kanagawa Wave - No Italics",
+    },
+
+    // WORD WRAP GUIDE
+    // =========================================================================
+    "wrap_guides": [80],
+
+    // ICON THEME
+    // =========================================================================
+    "icon_theme": {
+        "mode": "dark",
+        "light": "Catppuccin Mocha",
+        "dark": "Catppuccin Mocha",
+    },
+
+    // GIT SETTINGS
+    // =========================================================================
+    "git": {
+        "disable_git": true,
+        "git_gutter": "hide",
+        "blame": {
+            "show_avatar": false,
+        },
+        "inline_blame": {
+            "enabled": false,
+        },
+    },
+
+    // FONT & TAB SETTINGS
+    // =========================================================================
+    "tab_size": 4,
+    "buffer_font_family": "MonoLisa",
+    "ui_font_family": "MonoLisa",
+    "buffer_font_size": 22.0,
+    "ui_font_size": 22.0,
+    "terminal": {
+        "shell": "system",
+        "font_family": "MonoLisa",
+        "font_size": 20,
+    },
+
+    // INLAY HINTING
+    // =========================================================================
+    "inlay_hints": {
+        "enabled": true,
+        "show_type_hints": true,
+        "show_parameter_hints": true,
+        "show_other_hints": true,
+        "show_background": false,
+        "edit_debounce_ms": 700,
+        "scroll_debounce_ms": 50,
+        "toggle_on_modifiers_press": null,
+    },
+
+    // LSP & LANGUAGE SETTINGS
+    // =========================================================================
+    "lsp": {
+        "clangd": {
+            "binary": {
+                //"path": "/usr/bin/clangd",            // LINUX
+                "path": "C:\\llvm-mingw\\bin\\clangd", // WINDOWS
+                "arguments": [
+                    "--background-index",
+                    "--clang-tidy",
+                    "--header-insertion=iwyu",
+                    "--completion-style=detailed",
+                    "--function-arg-placeholders=0",
+                    "--all-scopes-completion",
+                ],
+            },
+        },
+    },
+    "languages": {
+        "C++": {
+            "format_on_save": "on",
+            "tab_size": 4,
+            "language_servers": ["clangd"],
+        },
+    },
+    "format_on_save": "on",
+}
