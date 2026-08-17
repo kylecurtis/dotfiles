@@ -1,0 +1,203 @@
+/* ============================================================
+CODEBLOCKS.CSS:
+Theme-aware Code / Terminal Windows
+============================================================ */
+
+/* Shared window */
+.markdown-rendered pre:has(> code.language-cpp),
+.markdown-rendered pre:has(> code.language-sh),
+.markdown-rendered pre:has(> code.language-bash),
+.markdown-rendered pre:has(> code.language-shell) {
+    position: relative;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+
+    /* Space for the title bar */
+    padding-top: 3.25em;
+    overflow: hidden;
+    border: 2px solid color-mix(in srgb, var(--text-normal) 15%, transparent);
+    border-radius: 10px;
+
+    /* Use the user's current Obsidian background,
+    then darken it slightly. */
+    background-color: color-mix(
+        in srgb,
+        var(--background-primary) 88%,
+        black 12%
+    );
+
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.2),
+        0 1px 2px rgba(0, 0, 0, 0.2),
+        0 0 18px color-mix(in srgb, var(--interactive-accent) 12%, transparent);
+}
+
+/* Title bar */
+.markdown-rendered pre:has(> code.language-cpp)::before,
+.markdown-rendered pre:has(> code.language-sh)::before,
+.markdown-rendered pre:has(> code.language-bash)::before,
+.markdown-rendered pre:has(> code.language-shell)::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2.7em;
+    background-color: color-mix(
+        in srgb,
+        var(--background-primary) 80%,
+        black 20%
+    );
+    border-bottom: 1px solid
+        color-mix(in srgb, var(--text-normal) 12%, transparent);
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Traffic-light buttons */
+.markdown-rendered pre:has(> code.language-cpp)::after,
+.markdown-rendered pre:has(> code.language-sh)::after,
+.markdown-rendered pre:has(> code.language-bash)::after,
+.markdown-rendered pre:has(> code.language-shell)::after {
+    /* Three colored circles followed by the title.
+    The dots are created using radial gradients. */
+    content: "";
+    position: absolute;
+    top: 1.35em;
+    left: 14px;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 10px;
+    background-image:
+        radial-gradient(circle, #ff5f57 0 4px, transparent 5.5px),
+        radial-gradient(circle, #febc2e 0 4px, transparent 5.5px),
+        radial-gradient(circle, #28c840 0 4px, transparent 5.5px);
+    background-size:
+        10px 10px,
+        10px 10px,
+        10px 10px;
+    background-position:
+        0 0,
+        17px 0,
+        34px 0;
+    background-repeat: no-repeat;
+    z-index: 20;
+    pointer-events: none;
+}
+
+/* ============================================================
+   4. Code title
+   ============================================================ */
+
+/*
+   ::after can't be used for the title because it is already
+   being used for the traffic lights above.
+
+   Instead, use a background + text shadow technique on the
+   code element's first line.
+
+   The actual title is supplied using a CSS pseudo-element
+   attached to the code element.
+*/
+
+.markdown-rendered pre:has(> code.language-cpp) code::before {
+    content: "Code";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.8em;
+    font-weight: 500;
+    z-index: 30;
+    pointer-events: none;
+}
+
+/* Terminal title */
+.markdown-rendered pre:has(> code.language-sh) code::before,
+.markdown-rendered pre:has(> code.language-bash) code::before,
+.markdown-rendered pre:has(> code.language-shell) code::before {
+    content: "Terminal";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2.6rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.8em;
+    font-weight: 500;
+    z-index: 30;
+    pointer-events: none;
+}
+
+/* ============================================================
+   6. Code typography
+   ============================================================ */
+
+.markdown-rendered pre:has(> code.language-cpp) code,
+.markdown-rendered pre:has(> code.language-sh) code,
+.markdown-rendered pre:has(> code.language-bash) code,
+.markdown-rendered pre:has(> code.language-shell) code {
+    font-size: 1em;
+    line-height: 1.55;
+    white-space: pre;
+}
+
+/* ============================================================
+Terminal-specific background
+============================================================ */
+.markdown-rendered pre:has(> code.language-sh),
+.markdown-rendered pre:has(> code.language-bash),
+.markdown-rendered pre:has(> code.language-shell) {
+    background-color: color-mix(
+        in srgb,
+        var(--background-primary) 90%,
+        black 10%
+    );
+}
+
+/* ============================================================
+   8. Terminal text
+   ============================================================ */
+
+.markdown-rendered pre:has(> code.language-sh) code,
+.markdown-rendered pre:has(> code.language-bash) code,
+.markdown-rendered pre:has(> code.language-shell) code {
+    color: color-mix(in srgb, #a8ff9f 85%, var(--text-normal) 15%);
+}
+
+/* ============================================================
+   9. Horizontal scrolling
+   ============================================================ */
+
+.markdown-rendered pre:has(> code.language-cpp),
+.markdown-rendered pre:has(> code.language-sh),
+.markdown-rendered pre:has(> code.language-bash),
+.markdown-rendered pre:has(> code.language-shell) {
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* ============================================================
+   10. Scrollbar
+   ============================================================ */
+
+.markdown-rendered pre:has(> code.language-cpp)::-webkit-scrollbar,
+.markdown-rendered pre:has(> code.language-sh)::-webkit-scrollbar,
+.markdown-rendered pre:has(> code.language-bash)::-webkit-scrollbar,
+.markdown-rendered pre:has(> code.language-shell)::-webkit-scrollbar {
+    height: 8px;
+}
+
+.markdown-rendered pre:has(> code.language-cpp)::-webkit-scrollbar-thumb,
+.markdown-rendered pre:has(> code.language-sh)::-webkit-scrollbar-thumb,
+.markdown-rendered pre:has(> code.language-bash)::-webkit-scrollbar-thumb,
+.markdown-rendered pre:has(> code.language-shell)::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--text-normal) 25%, transparent);
+    border-radius: 4px;
+}
