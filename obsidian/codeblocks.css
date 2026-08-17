@@ -85,11 +85,9 @@ Theme-aware Code / Terminal Windows
     pointer-events: none;
 }
 
-/* ============================================================
-   4. Code title
-   ============================================================ */
-
 /*
+Code title:
+
    ::after can't be used for the title because it is already
    being used for the traffic lights above.
 
@@ -135,10 +133,7 @@ Theme-aware Code / Terminal Windows
     pointer-events: none;
 }
 
-/* ============================================================
-   6. Code typography
-   ============================================================ */
-
+/* Code typography */
 .markdown-rendered pre:has(> code.language-cpp) code,
 .markdown-rendered pre:has(> code.language-sh) code,
 .markdown-rendered pre:has(> code.language-bash) code,
@@ -148,9 +143,7 @@ Theme-aware Code / Terminal Windows
     white-space: pre;
 }
 
-/* ============================================================
-Terminal-specific background
-============================================================ */
+/* Terminal-specific background */
 .markdown-rendered pre:has(> code.language-sh),
 .markdown-rendered pre:has(> code.language-bash),
 .markdown-rendered pre:has(> code.language-shell) {
@@ -161,20 +154,14 @@ Terminal-specific background
     );
 }
 
-/* ============================================================
-   8. Terminal text
-   ============================================================ */
-
+/* Terminal text */
 .markdown-rendered pre:has(> code.language-sh) code,
 .markdown-rendered pre:has(> code.language-bash) code,
 .markdown-rendered pre:has(> code.language-shell) code {
     color: color-mix(in srgb, #a8ff9f 85%, var(--text-normal) 15%);
 }
 
-/* ============================================================
-   9. Horizontal scrolling
-   ============================================================ */
-
+/* Horizontal scrolling */
 .markdown-rendered pre:has(> code.language-cpp),
 .markdown-rendered pre:has(> code.language-sh),
 .markdown-rendered pre:has(> code.language-bash),
@@ -183,10 +170,7 @@ Terminal-specific background
     overflow-y: hidden;
 }
 
-/* ============================================================
-   10. Scrollbar
-   ============================================================ */
-
+/* Scrollbar */
 .markdown-rendered pre:has(> code.language-cpp)::-webkit-scrollbar,
 .markdown-rendered pre:has(> code.language-sh)::-webkit-scrollbar,
 .markdown-rendered pre:has(> code.language-bash)::-webkit-scrollbar,
